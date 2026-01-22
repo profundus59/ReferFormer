@@ -4,7 +4,6 @@ Ref-YoutubeVOS data loader
 from pathlib import Path
 
 import torch
-from torch.autograd.grad_mode import F
 from torch.utils.data import Dataset
 import datasets.transforms_video as T
 
