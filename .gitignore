@@ -1,0 +1,10 @@
+# This files shows files and directories to be ignored by Git
+
+# data
+# data/
+
+# outputs
+output/
+
+# etc
+__pycache__/
