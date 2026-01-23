@@ -107,6 +107,9 @@ def get_args_parser():
     parser.add_argument('--davis_path', type=str, default='data/ref-davis')
     parser.add_argument('--a2d_path', type=str, default='data/a2d_sentences')
     parser.add_argument('--jhmdb_path', type=str, default='data/jhmdb_sentences')
+    parser.add_argument('--actionvos_path', type=str, default='data/actionvos')
+    parser.add_argument('--expression_file', type=str, default='train_expressions.json', help='expression annotation file for ActionVOS')
+    parser.add_argument('--use_weights', action='store_true', help='use sample weights for ActionVOS training')
     parser.add_argument('--max_skip', default=3, type=int, help="max skip frame number")
     parser.add_argument('--max_size', default=640, type=int, help="max size for the frame")
     parser.add_argument('--binary', action='store_true')
@@ -134,6 +137,12 @@ def get_args_parser():
                         help='number of distributed processes')
     parser.add_argument('--dist_url', default='env://', help='url used to set up distributed training')
     parser.add_argument('--cache_mode', default=False, action='store_true', help='whether to cache images on memory')
+    
+    # ActionVOS specific parameters
+    parser.add_argument('--all_pos', action='store_true', help='use all positive samples for ActionVOS dataset')
+    parser.add_argument('--save_interval', default=1, type=int, help='save checkpoint every N epochs')
+    parser.add_argument('--no_wandb', action='store_true', help='disable wandb logging')
+    
     return parser
 
 
