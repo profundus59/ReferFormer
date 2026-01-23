@@ -5,6 +5,7 @@
 
 # outputs
 output/
+jh_comparison_collections/
 
 # etc
 __pycache__/
