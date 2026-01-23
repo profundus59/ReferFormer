@@ -108,7 +108,7 @@ def get_args_parser():
     parser.add_argument('--a2d_path', type=str, default='data/a2d_sentences')
     parser.add_argument('--jhmdb_path', type=str, default='data/jhmdb_sentences')
     parser.add_argument('--actionvos_path', type=str, default='data/actionvos')
-    parser.add_argument('--expression_file', type=str, default='train_expressions.json', help='expression annotation file for ActionVOS')
+    parser.add_argument('--expression_file', type=str, default='train_meta_expressions_promptaction.json', help='expression annotation file for ActionVOS')
     parser.add_argument('--use_weights', action='store_true', help='use sample weights for ActionVOS training')
     parser.add_argument('--max_skip', default=3, type=int, help="max skip frame number")
     parser.add_argument('--max_size', default=640, type=int, help="max size for the frame")
