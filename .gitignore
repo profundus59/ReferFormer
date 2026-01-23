@@ -1,7 +1,7 @@
 # This files shows files and directories to be ignored by Git
 
 # data
-# data/
+data/
 
 # outputs
 output/
