@@ -7,6 +7,7 @@ from .a2d import build as build_a2d
 from .jhmdb import build as build_jhmdb
 from .refexp import build as build_refexp
 from .concat_dataset import build as build_joint
+from .actionvos import build as build_actionvos
 
 
 def get_coco_api_from_dataset(dataset):
@@ -28,6 +29,8 @@ def build_dataset(dataset_file: str, image_set: str, args):
         return build_a2d(image_set, args)
     if dataset_file == 'jhmdb':
         return build_jhmdb(image_set, args)
+    if dataset_file == 'actionvos' or dataset_file == 'actionvos_allpos':
+        return build_actionvos(image_set, args)
     # for pretraining
     if dataset_file == "refcoco" or dataset_file == "refcoco+" or dataset_file == "refcocog":
         return build_refexp(dataset_file, image_set, args)

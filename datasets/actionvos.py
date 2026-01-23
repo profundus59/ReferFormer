@@ -9,7 +9,7 @@ import torch
 # from torch.autograd.grad_mode import F
 from torch.nn import functional as F
 from torch.utils.data import Dataset
-import datasets.transforms_video_actionvos as T
+import datasets.transforms_video as T
 
 import os
 from PIL import Image
