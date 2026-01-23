@@ -37,7 +37,7 @@ def match_name_keywords(n, name_keywords):
 def main(args):
     # wandb.configuration
     if not args.no_wandb:
-        wandb.init(project='actionvos-seim_ver1')
+        wandb.init(project='referformer_baseline')
         wandb.config.update(args)
     # import ipdb; ipdb.set_trace()
     args.masks = True
