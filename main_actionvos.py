@@ -36,8 +36,9 @@ def match_name_keywords(n, name_keywords):
 
 def main(args):
     # wandb.configuration
-    wandb.init(project='actionvos-seim_ver1')
-    wandb.config.update(args)
+    if not args.no_wandb:
+        wandb.init(project='actionvos-seim_ver1')
+        wandb.config.update(args)
     # import ipdb; ipdb.set_trace()
     args.masks = True
 
@@ -210,7 +211,8 @@ def main(args):
     print('Training time {}'.format(total_time_str))
     
     # wandb.save('actionvos_org_train')
-    wandb.finish()
+    if not args.no_wandb:
+        wandb.finish()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('ReferFormer training and evaluation script', parents=[opts.get_args_parser()])
