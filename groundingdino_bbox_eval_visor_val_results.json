@@ -1,0 +1,20 @@
+{
+  "val": {
+    "mean_iou": 0.5251354233849828,
+    "median_iou": 0.47194674611091614,
+    "iou@0.5": 0.4828358936052743,
+    "iou@0.75": 0.38046831866454484,
+    "total_gt_boxes": 30791,
+    "total_pred_boxes": 200491,
+    "matched_boxes": 14867,
+    "missing_predictions": 0,
+    "missing_gt": 0,
+    "num_evaluated": 30791,
+    "class_accuracy": 0.5548699295248611,
+    "class_correct": 17085,
+    "class_total": 30791,
+    "class_correct_high_iou": 12027,
+    "class_correct_low_iou": 5058,
+    "class_wrong_high_iou": 2840
+  }
+}
