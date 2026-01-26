@@ -10,3 +10,4 @@ pandas
 imgaug
 h5py
 av
+psutil
